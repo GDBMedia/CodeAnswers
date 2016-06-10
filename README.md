@@ -1,5 +1,5 @@
 # Code-answer
-#### JavaScript Week 2 Independent Project
+#### JavaScript Week 3 Independent Project
 
 #### by Garrett Biernat 6/10
 ## Description
