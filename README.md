@@ -1,7 +1,9 @@
 # Code-answer
+#### JavaScript Week 2 Independent Project
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### by Garrett Biernat 6/10
+## Description
+A web page made with Ember and HBS that allows you to add different Questions to a page and then go in and add responses and the ability to up vote and down vote the answer
 
 ## Prerequisites
 
@@ -50,4 +52,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
