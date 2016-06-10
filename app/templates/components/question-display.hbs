@@ -1,0 +1,23 @@
+<div class="z-depth-1 clearfix box hoverable">
+  <div class="dropdown">
+  <button class="mybtn dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+  <span class="glyphicon glyphicon-option-vertical setting"></span></button>
+  <ul class="dropdown-menu pull-right">
+    <li {{action 'delete' question}} ><a>Delete <span class="glyphicon glyphicon-erase"></span></a></li>
+    <li>{{#link-to 'question' question.id}}<a>Edit <span class="glyphicon glyphicon-pencil"></span></a>{{/link-to}}</li>
+  </ul>
+</div>
+  <h2><strong>{{question.name}}</strong></h2>
+  <p class="timestampIndex">{{question.timestamp}}</p>
+  <ul class="contentList">
+    {{#link-to 'question' question.id}}<li class="content">{{question.content}}</li>{{/link-to}}
+  </ul>
+  <div class="row" id="footer">
+    <div class="col s12">
+      <p class="answerbtn"{{action "showAnswers"}}><strong><a>{{question.answers.length}} Answers <span class="glyphicon glyphicon-comment"></span></a></strong></p>
+    </div>
+    {{#if answerShow}}
+      {{show-answers question=question}}
+    {{/if}}
+  </div>
+</div>

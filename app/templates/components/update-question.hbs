@@ -1,0 +1,25 @@
+{{#if updateQuestionForm}}
+  <h4>Update {{question.name}}'s Question</h4>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          {{input value=name id="name" placeholder=question.name class="form-control"}}
+        </div>
+
+        <div class="form-group">
+          <label for="content">Question</label>
+          {{input value=content id="content" placeholder=question.content class="form-control"}}
+        </div>
+
+        <div class="form-group">
+          <label for="details">Details</label>
+          {{input value=details id="details" placeholder=question.details class="form-control"}}
+        </div>
+
+        <button class="btn" {{action 'update' question}}>Save</button>
+      </form>
+    </div>
+{{else}}
+    <button {{action 'updateQuestionForm'}} class="btn">Update</button>
+{{/if}}

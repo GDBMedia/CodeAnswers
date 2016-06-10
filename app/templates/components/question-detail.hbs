@@ -1,0 +1,20 @@
+<h2>{{question.name}}</h2>
+<p class="timestamp">{{question.timestamp}}</p>
+<hr>
+<h3>{{question.content}}</h3>
+<ul>
+  <p>{{question.details}}</p>
+</ul>
+{{#if question.answers}}
+<h3>Answers</h3>
+  {{#each question.answers as |answer|}}
+    {{answer-detail answer=answer destroyAnswer="destroyAnswer" thumbsSave="thumbsSave"}}
+  {{/each}}
+{{/if}}
+<div class="btn-group">
+  <button class="btn red"{{action 'delete' question}}>Delete</button>
+  <button class="btn green"{{action 'answerFormShow'}}>New Answer</button>
+</div>
+{{#if addNewAnswer}}
+  {{new-answer saveAnswer="saveAnswer" question=question}}
+{{/if}}

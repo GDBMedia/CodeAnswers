@@ -1,0 +1,21 @@
+<h1>New Post</h1>
+    <div>
+     <form>
+       <div class="form-group">
+         <label for="name">Name</label>
+         {{input autofocus="true" value=name id="name" class="form-control"}}
+       </div>
+
+       <div class="form-group">
+         <label for="content">Question</label>
+         {{input value=content id="content" class="form-control"}}
+       </div>
+
+       <div class="form-group">
+         <label for="details">Details</label>
+         {{input value=details id="details" class="form-control"}}
+       </div>
+
+       <button class="btn" {{action 'save'}}>Save</button>
+     </form>
+    </div>

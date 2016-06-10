@@ -1,0 +1,13 @@
+<div class="row valign-wrapper">
+  <div class="col s6 valign">
+    <h1 class="questionheader valign">Questions</h1>
+  </div>
+
+  <div class="col s6 valign">
+    {{#link-to 'new-question'}}<button class="btn btn-lg blue pull-right my-btn valign">Ask New Question <span class="glyphicon glyphicon-plus-sign"></span></button>{{/link-to}}
+  </div>
+</div>
+<hr>
+{{#each model as |question|}}
+  {{question-display question=question destroyQuestion="destroyQuestion"}}
+{{/each}}
