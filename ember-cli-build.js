@@ -6,26 +6,8 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css.map');
-  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
-  app.import('bower_components/Materialize/dist/css/materialize.css');
-  app.import('bower_components/Materialize/dist/js/materialize.js');
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', {
-    destDir: 'fonts'
-  });
+  // app.import('bower_components/Materialize/dist/css/materialize.css');
+  // app.import('bower_components/Materialize/dist/js/materialize.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
