@@ -1,27 +1,27 @@
 <div class="answerBox clearfix z-depth-1 hoverable">
   <div class="dropdown">
     <button class="mybtn dropdown-toggle pull-right" type="button" data-toggle="dropdown">
-    <span class="glyphicon glyphicon-option-vertical setting"></span></button>
+    <i class="small material-icons">more_vert</i></button>
     <ul class="dropdown-menu pull-right">
-      <li {{action 'delete' answer}} ><a>Delete <span class="glyphicon glyphicon-erase"></span></a></li>
+      <li {{action 'delete' answer}} ><a>Delete <i class="material-icons">delete</i></a></li>
     </ul>
   </div>
     <h3>{{answer.name}}</h3>
     <p class="timestamp">{{answer.timestamp}}</p>
     <p>{{answer.content}}</p>
-    <div class="row">
-      <div class="col s6 clear">
-        <h4 class="category pull-left">{{answer.score}}
+    <div class="row valign-wrapper">
+      <div class="col s6 clear valign">
+        <h4 class="category left valign">{{answer.score}}
         {{#if (gt answer.score 14)}}
-          <span class="glyphicon glyphicon-fire pull-left fire"></span>
+          <span class="glyphicon glyphicon-fire left fire valign"></span>
         {{/if}}
         {{#if (lt answer.score -4)}}
-          <span class="glyphicon glyphicon-trash pull-left trash"></span>
+          <span class="glyphicon glyphicon-trash left trash valign"></span>
         {{/if}}</h4>
       </div>
-      <div class="col s6">
-        <button class="mybtn pull-right thumbs thumb-down" {{action 'thumbsDown' answer}}><span class="glyphicon glyphicon-thumbs-down"></span></button>
-        <button class="mybtn pull-right thumbs thumb-up" {{action 'thumbsUp' answer}}><span class="glyphicon glyphicon-thumbs-up"></span></button>
+      <div class="col s6 valign">
+        <button class="mybtn pull-right thumbs thumb-down valign" {{action 'thumbsDown' answer}}><i class="small material-icons">thumb_down</i></button>
+        <button class="mybtn pull-right thumbs thumb-up valign" {{action 'thumbsUp' answer}}><i class="small material-icons">thumb_up</i></button>
       </div>
     </div>
 </div>

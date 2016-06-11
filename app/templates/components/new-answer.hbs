@@ -1,14 +1,14 @@
 <h1>New Answer</h1>
     <div>
       <form>
-        <div class="form-group">
+        <div class="input-field">
+          {{input autofocus="true" value=name id="name" type="text"}}
           <label for="name">Name</label>
-          {{input autofocus="true" value=name id="name" class="form-control"}}
         </div>
 
-        <div class="form-group">
+        <div class="input-field">
+          {{textarea value=content id="content" class="materialize-textarea"}}
           <label for="content">Content</label>
-          {{input value=content id="content" class="form-control"}}
         </div>
 
         <button class="waves-effect waves-light btn-large" {{action 'save'}}>Save</button>

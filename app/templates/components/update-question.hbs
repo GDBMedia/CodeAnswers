@@ -4,17 +4,17 @@
       <form>
         <div class="form-group">
           <label for="name">Name</label>
-          {{input value=name id="name" placeholder=question.name class="form-control"}}
+          {{input value=name id="name" placeholder=question.name type="text"}}
         </div>
 
         <div class="form-group">
           <label for="content">Question</label>
-          {{input value=content id="content" placeholder=question.content class="form-control"}}
+          {{input value=content id="content" placeholder=question.content type="text"}}
         </div>
 
         <div class="form-group">
           <label for="details">Details</label>
-          {{input value=details id="details" placeholder=question.details class="form-control"}}
+          {{textarea value=details id="details" placeholder=question.details class="materialize-textarea"}}
         </div>
 
         <button class="waves-effect waves-light btn-large" {{action 'update' question}}>Save</button>

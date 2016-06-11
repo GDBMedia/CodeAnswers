@@ -1,19 +1,19 @@
 <h1>New Post</h1>
     <div>
      <form>
-       <div class="form-group">
-         <label for="name">Name</label>
-         {{input autofocus="true" value=name id="name" class="form-control"}}
+       <div class="input-field">
+         {{input autofocus="true" value=name id="name" type="text"}}
+          <label for="name">Name</label>
        </div>
 
-       <div class="form-group">
-         <label for="content">Question</label>
-         {{input value=content id="content" class="form-control"}}
+       <div class="input-field">
+         {{input value=content id="content" type="text"}}
+          <label for="content">Question</label>
        </div>
 
-       <div class="form-group">
+       <div class="input-field">
+         {{textarea value=details id="details" class="materialize-textarea"}}
          <label for="details">Details</label>
-         {{input value=details id="details" class="form-control"}}
        </div>
 
        <button class="waves-effect waves-light btn-large" {{action 'save'}}>Save</button>

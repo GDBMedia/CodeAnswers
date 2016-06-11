@@ -1,11 +1,21 @@
 body{
   margin-bottom: 8em;
   }
+.container{
+  margin-top: 4em;
+}
 p{
   font-size: 18px;
 }
+.home li a{
+  padding-top: .3em;
+  font-size: 30px;
+}
+nav{
+  height: 7em;
+}
 #answerbtn{
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .header{
   margin-top: 75px;
@@ -52,9 +62,8 @@ p{
   color: #86878A;
 }
 .box{
-  /*box-shadow: 15px 15px 5px #AFAFAF;*/
   margin: 2.5em 0 2.5em 0;
-  padding: .5em 1em .5em 1em;
+  padding: 1.4em;
   border: solid 2px #DBDBDB;
 }
 .contentList li{
