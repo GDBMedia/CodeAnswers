@@ -12,8 +12,8 @@
   {{/each}}
 {{/if}}
 <div class="btn-group">
-  <button class="btn red"{{action 'delete' question}}>Delete</button>
-  <button class="btn green"{{action 'answerFormShow'}}>New Answer</button>
+  <button class="waves-effect waves-light btn-large red darken-1"{{action 'delete' question}}>Delete</button>
+  <button class="waves-effect waves-light btn-large green darken-2"{{action 'answerFormShow'}}>New Answer</button>
 </div>
 {{#if addNewAnswer}}
   {{new-answer saveAnswer="saveAnswer" question=question}}

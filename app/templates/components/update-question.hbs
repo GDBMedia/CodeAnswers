@@ -17,9 +17,9 @@
           {{input value=details id="details" placeholder=question.details class="form-control"}}
         </div>
 
-        <button class="btn" {{action 'update' question}}>Save</button>
+        <button class="waves-effect waves-light btn-large" {{action 'update' question}}>Save</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'updateQuestionForm'}} class="btn">Update</button>
+    <button {{action 'updateQuestionForm'}} class="waves-effect waves-light btn-large">Update</button>
 {{/if}}
