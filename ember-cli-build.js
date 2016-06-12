@@ -9,6 +9,8 @@ module.exports = function(defaults) {
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
   app.import('bower_components/bootstrap/dist/css/bootstrap.css.map');
   app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/bootstrap-sweetalert/dist/sweetalert.js');
+  app.import('bower_components/bootstrap-sweetalert/dist/sweetalert.css');
   app.import('bower_components/Materialize/dist/css/materialize.css');
   app.import('bower_components/Materialize/dist/js/materialize.js');
   app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', {

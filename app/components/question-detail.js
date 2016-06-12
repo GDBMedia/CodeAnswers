@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import sweetAlert from 'npm:sweetalert';
+var swal = sweetAlert;
 
 export default Ember.Component.extend({
   actions:{
@@ -16,9 +18,25 @@ export default Ember.Component.extend({
       this.set('addNewAnswer', true);
     },
     delete(question) {
-       if (confirm('Are you sure you want to delete this Question?')) {
-         this.sendAction('destroyQuestion', question);
-       }
+      var newthis = this;
+       swal({
+         title: "Are you sure?",
+         text: "You will not be able to recover this Question!",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Yes, delete it!",
+         cancelButtonText: "No, cancel!",
+         closeOnConfirm: false,
+         closeOnCancel: false },
+         function(isConfirm){
+           if (isConfirm) {
+             swal("Deleted!", "Your Question has been deleted.", "success");
+             newthis.sendAction('destroyQuestion', question);
+           }
+          else {
+            swal("Cancelled", "Your Question is safe :)", "error");   }
+          });
      },
     destroyAnswer(answer) {
       answer.destroyRecord();

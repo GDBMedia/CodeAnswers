@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       var params = {
         name: this.get('name'),
         content: this.get('content'),
+        details: this.get('details'),
         timestamp: moment().format("MMMM Do YYYY, h:mm a") + " Edited",
       };
       this.set('updateQuestionForm', false);

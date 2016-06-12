@@ -7,6 +7,7 @@
     "ember-qunit-notifications": "0.1.0",
     "bootstrap": "^3.3.6",
     "firebase": "^3.0.0",
-    "Materialize": "materialize#^0.97.6"
+    "Materialize": "materialize#^0.97.6",
+    "sweetalert": "~1.1.0"
   }
 }

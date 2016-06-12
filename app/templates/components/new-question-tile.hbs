@@ -2,20 +2,23 @@
     <div>
      <form>
        <div class="input-field">
-         {{input autofocus="true" value=name id="name" type="text"}}
-          <label for="name">Name</label>
+         <i class="material-icons prefix">account_circle</i>
+         {{input autofocus="true" value=name id="questionname" type="text"}}
+          <label for="questionname">Name</label>
        </div>
 
        <div class="input-field">
+         <i class="material-icons prefix">live_help</i>
          {{input value=content id="content" type="text"}}
           <label for="content">Question</label>
        </div>
 
        <div class="input-field">
-         {{textarea value=details id="details" class="materialize-textarea"}}
+         <i class="material-icons prefix">comment</i>
+         {{textarea value=details id="details" class="materialize-textarea" type="text"}}
          <label for="details">Details</label>
        </div>
 
-       <button class="waves-effect waves-light btn-large" {{action 'save'}}>Save</button>
+       <button class="waves-effect waves-light btn-large blue hoverable" {{action 'save'}}>Save</button>
      </form>
     </div>

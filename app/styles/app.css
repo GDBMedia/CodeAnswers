@@ -45,10 +45,6 @@ nav{
 .trash{
   color: #B63238;
 }
-.answerbtn{
-  color: #86878A;
-  text-align: left;
-}
 .content{
   font-size: 27px;
 }
@@ -79,6 +75,40 @@ nav{
 .setting{
   font-size: 20px;
   color: #86878A;
+}
+.contentLink a{
+  color: #2196f3;
+}
+.contentLink a:hover{
+  color: #fb8c00;
+  text-decoration: none;
+}
+a.btn-large:hover{
+  color: white;
+  text-decoration: none;
+}
+input[type=text]:focus:not([readonly]) {
+     border-bottom: 1px solid #fb8c00;
+     box-shadow: 0 1px 0 0 #fb8c00;
+}
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fb8c00;
+    box-shadow: 0 1px 0 0 #fb8c00;
+}
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #fb8c00;
+}
+input[type=text]:focus:not([readonly]) + label {
+  color: #fb8c00;
+}
+.input-field label:focus {
+  color: #fb8c00;
+}
+.input-field .prefix.active {
+  color: #fb8c00;
+}
+.input-field .prefix {
+  color: #9e9e9e;
 }
 #myjumbo{
   margin-top: 50px;
