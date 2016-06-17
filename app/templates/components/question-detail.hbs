@@ -5,9 +5,14 @@
 <ul>
   <p>{{question.details}}</p>
 </ul>
+<hr>
+{{#if (eq sortedAnswers.length 0)}}
+  {{log "hey"}}
+  <h3 class="center text-muted">No Answers</h3>
+{{/if}}
 {{#if question.answers}}
 <h3>Answers</h3>
-  {{#each question.answers as |answer|}}
+  {{#each sortedAnswers as |answer|}}
     {{answer-detail answer=answer destroyAnswer="destroyAnswer" thumbsSave="thumbsSave"}}
   {{/each}}
 {{/if}}

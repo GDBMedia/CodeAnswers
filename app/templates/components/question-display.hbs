@@ -13,11 +13,18 @@
     <div class="contentLink">{{#link-to 'question' question.id}}<li class="content">{{question.content}}</li>{{/link-to}}</div>
   </ul>
   <div class="row" id="footer">
-    <div class="col s12">
-      <button class="waves-effect waves-light orange darken-1 btn-large hoverable"{{action "showAnswers"}} id="answerbtn"><strong>{{question.answers.length}} Answers <i class="material-icons">chat</i></strong></button>
+    <div class="col s6">
+      <button class="waves-effect waves-light orange darken-1 btn-large hoverable"{{action "showAnswers"}} id="answerbtn"><strong class="answertext">{{answers question.answers.length}}<i class="material-icons answericon">chat</i></strong></button>
     </div>
+    <div class="col s6">
+      <a class="right" {{action 'addToFavorites' question}}>{{star clicked}}</a>
+    </div>
+  </div>
     {{#if answerShow}}
-      {{show-answers question=question}}
+      {{#if (eq sortedAnswers.length 0)}}
+        <hr>
+        <h3 class="center text-muted">No Answers</h3>
+      {{/if}}
+      {{show-answers answers=sortedAnswers question=question}}
     {{/if}}
   </div>
-</div>

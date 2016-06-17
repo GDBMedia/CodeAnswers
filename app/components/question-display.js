@@ -3,7 +3,26 @@ import sweetAlert from 'npm:sweetalert';
 var swal = sweetAlert;
 
 export default Ember.Component.extend({
+  favorite: Ember.inject.service(),
+  sortBy: ['score:desc'],
+  sortedAnswers: Ember.computed.sort('question.answers', 'sortBy'),
   answerShow: false,
+  clicked: false,
+  init() {
+    this._super();
+    if(this.get('favorite.favorites').indexOf(this.get('question')) !== -1){
+      this.set('clicked', true);
+    }else{
+      this.set('clicked', false);
+    }
+  },
+  favorited: Ember.observer('favorite.favorites.length', function(){
+    if(this.get('favorite.favorites').indexOf(this.get('question')) !== -1){
+      this.set('clicked', true);
+    }else{
+      this.set('clicked', false);
+    }
+  }),
   actions:{
     showAnswers(){
       if(this.answerShow === false){
@@ -37,6 +56,14 @@ export default Ember.Component.extend({
     destroyComment(answer) {
       answer.destroyRecord();
       this.transitionTo('index');
-    }
+    },
+    addToFavorites(question) {
+      if(this.clicked === false){
+          this.get('favorite').add(question);
+       }
+      else{
+        this.get('favorite').remove(question);
+     }
+   },
   }
 });

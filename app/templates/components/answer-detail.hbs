@@ -11,13 +11,7 @@
     <p>{{answer.content}}</p>
     <div class="row valign-wrapper">
       <div class="col s6 clear valign">
-        <h4 class="category left valign">{{answer.score}}
-        {{#if (gt answer.score 14)}}
-          <span class="glyphicon glyphicon-fire left fire valign"></span>
-        {{/if}}
-        {{#if (lt answer.score -4)}}
-          <span class="glyphicon glyphicon-trash left trash valign"></span>
-        {{/if}}</h4>
+        <h4 class="category left valign">{{answer.score}}{{answer-icon answer.score}}</h4>
       </div>
       <div class="col s6 valign">
         <button class="mybtn pull-right thumbs thumb-down valign" {{action 'thumbsDown' answer}}><i class="small material-icons">thumb_down</i></button>

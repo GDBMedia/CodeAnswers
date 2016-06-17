@@ -1,8 +1,8 @@
 body{
   margin-bottom: 8em;
   }
-.container{
-  margin-top: 4em;
+#main{
+  margin-top: 5em;
 }
 p{
   font-size: 18px;
@@ -16,10 +16,6 @@ nav{
 }
 #answerbtn{
   margin-bottom: 2em;
-}
-.header{
-  margin-top: 75px;
-  text-align: center;
 }
 .category{
   font-size: 25px;
@@ -145,4 +141,26 @@ input[type=text]:focus:not([readonly]) + label {
 }
 .btn-group{
   margin-top: 2em;
+}
+#home{
+  line-height: 80px;
+  margin: auto;
+  font-size: 60px;
+}
+.star:hover{
+  color: #f9c750;
+}
+.star-click{
+  color: #f9c750;
+}
+a:hover{
+  color: #fb8c00;
+  text-decoration: none;
+}
+a.active{
+  color: #fb8c00;
+    text-decoration: none;
+}
+.answericon{
+  font-size: 15px;
 }

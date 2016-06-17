@@ -1,0 +1,8 @@
+<h1>Favorites</h1>
+<hr>
+{{#if (eq favorite.favorites.length 0)}}
+  <h3 class="center text-muted">No Favorites</h3>
+{{/if}}
+{{#each favorite.favorites as |question|}}
+  {{question-display question=question clicked=true}}
+{{/each}}

@@ -10,6 +10,8 @@ export default Ember.Component.extend({
         content: this.get('content'),
         details: this.get('details'),
         timestamp: moment().format("MMMM Do YYYY, h:mm a"),
+        numOfAnswers: 0,
+        favorited: false,
       };
       this.sendAction('saveQuestion', params);
     }

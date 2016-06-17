@@ -3,16 +3,20 @@ import sweetAlert from 'npm:sweetalert';
 var swal = sweetAlert;
 
 export default Ember.Component.extend({
+  sortBy: ['score:desc'],
+  sortedAnswers: Ember.computed.sort('question.answers', 'sortBy'),
   actions:{
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
+      var num = question.get('answers.length');
+      console.log(num);
+      question.set('numOfAnswers', num);
       question.get('answers').addObject(newAnswer);
       newAnswer.save().then(function() {
         return question.save();
       });
       this.set('addNewAnswer', false);
-      this.transitionTo('question', params.question);
     },
     answerFormShow(){
       this.set('addNewAnswer', true);

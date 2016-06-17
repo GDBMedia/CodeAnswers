@@ -4,12 +4,8 @@
   </div>
 
   <div class="col s6 valign">
-    <div class="fixed-action-btn" style="top: 12.5vh; right: 10vw">
-    {{#link-to 'new-question'}}<a class="btn-floating btn-large waves-effect waves-light orange darken-1 hoverable"><i class="large material-icons">add</i></a>{{/link-to}}
-    </div>
+    
   </div>
 </div>
 <hr>
-{{#each model as |question|}}
-  {{question-display question=question destroyQuestion="destroyQuestion"}}
-{{/each}}
+{{question-tile questions=model destroyQuestion="destroyQuestion"}}
