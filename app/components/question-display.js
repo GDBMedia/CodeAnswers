@@ -23,6 +23,10 @@ export default Ember.Component.extend({
       this.set('clicked', false);
     }
   }),
+  updateanswerlength: Ember.observer('question.answers.length',function(){
+    this.set('question.numOfAnswers', this.get('question.answers.length'));
+    this.get('question').save();
+  }),
   actions:{
     showAnswers(){
       if(this.answerShow === false){

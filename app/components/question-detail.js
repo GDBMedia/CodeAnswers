@@ -5,6 +5,10 @@ var swal = sweetAlert;
 export default Ember.Component.extend({
   sortBy: ['score:desc'],
   sortedAnswers: Ember.computed.sort('question.answers', 'sortBy'),
+  updateanswerlength: Ember.observer('question.answers.length',function(){
+    this.set('question.numOfAnswers', this.get('question.answers.length'));
+    this.get('question').save();
+  }),
   actions:{
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);

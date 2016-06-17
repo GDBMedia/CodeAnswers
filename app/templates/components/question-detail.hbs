@@ -10,6 +10,9 @@
   {{log "hey"}}
   <h3 class="center text-muted">No Answers</h3>
 {{/if}}
+{{#if addNewAnswer}}
+  {{new-answer saveAnswer="saveAnswer" question=question}}
+{{/if}}
 {{#if question.answers}}
 <h3>Answers</h3>
   {{#each sortedAnswers as |answer|}}
@@ -20,6 +23,3 @@
   <a class="waves-effect waves-light btn-large red darken-1 hoverable"{{action 'delete' question}}>Delete</a>
   <a class="waves-effect waves-light btn-large blue darken-2 hoverable"{{action 'answerFormShow'}}>New Answer</a>
 </div>
-{{#if addNewAnswer}}
-  {{new-answer saveAnswer="saveAnswer" question=question}}
-{{/if}}
