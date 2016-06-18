@@ -8,7 +8,7 @@ export default Ember.Route.extend({
      });
      Ember.RSVP.all(answer_deletions).then(function() {
        return question.destroyRecord();
-       this.store.unloadRecord(question);
+
      });
      question.destroyRecord();
      this.transitionTo('index');

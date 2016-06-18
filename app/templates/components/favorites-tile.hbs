@@ -4,5 +4,5 @@
   <h3 class="center text-muted">No Favorites</h3>
 {{/if}}
 {{#each favorite.favorites as |question|}}
-  {{question-display question=question clicked=true}}
+  {{question-display question=question clicked=true destroyQuestion="destroyQuestion"}}
 {{/each}}
