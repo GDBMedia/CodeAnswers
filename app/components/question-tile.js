@@ -1,13 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  init(){
-    this._super()
-    this.set("orderedQuestions", this.get('questions').toArray().reverse());
-  },
-  orderedQuestions: Ember.computed('questions.length',function(){
-    return this.get('questions').toArray().reverse();
-  }),
+  sortBy: ['numOfAnswers:desc'],
+  sortedQuestions: Ember.computed.sort('questions', 'sortBy'),
+  // orderedQuestions: Ember.computed('questions.length',function(){
+  //   console.log(this.sortedQuestions);
+  //   return this.get('questions').toArray().reverse();
+  // }),
   actions: {
     destroyQuestion(question) {
       this.sendAction('destroyQuestion', question);

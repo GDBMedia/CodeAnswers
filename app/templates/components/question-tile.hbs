@@ -1,6 +1,7 @@
 {{#if (eq questions.length 0)}}
   <h3 class="center text-muted">No Questions</h3>
 {{/if}}
-{{#each orderedQuestions as |question|}}
+
+{{#each sortedQuestions as |question|}}
   {{question-display question=question destroyQuestion="destroyQuestion"}}
 {{/each}}

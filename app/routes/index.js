@@ -1,13 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-    return this.store.query('question', {
-      orderBy: 'numOfAnswers'
-    });
- },
  actions: {
    destroyQuestion(question) {
+     var answer_deletions = question.get('answers').map(function(answer) {
+       return answer.destroyRecord();
+     });
+     Ember.RSVP.all(answer_deletions).then(function() {
+       return question.destroyRecord();
+       this.store.unloadRecord(question);
+     });
      question.destroyRecord();
      this.transitionTo('index');
    }
