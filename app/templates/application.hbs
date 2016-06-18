@@ -3,11 +3,12 @@
     <div class="nav-wrapper">
       <div class="container">
         {{#link-to "index"}}<h3 class="brand-logo center">&lcub;&lcub;Code Answers&rcub;&rcub;</h3>{{/link-to}}
-        <ul id="nav-mobile" class="left hide-on-med-and-down home">
-          <li>{{#link-to "index"}}<i class= "material-icons" id="home">home</i>{{/link-to}}</li>
+        <ul id="nav-mobile" class="left home">
+          <li>{{#link-to "index"}}<i class= "material-icons hide-on-med-and-down" id="home">home</i>{{/link-to}}</li>
           <li>{{#link-to "favorites"}}<i class= "material-icons" id="home">star</i>{{/link-to}}</li>
-          <li>{{#link-to "new-question"}}<i class= "material-icons" id="home">help_outline</i>{{/link-to}}</li>
+          <li>{{#link-to "new-question"}}<i class= "material-icons hide-on-med-and-down" id="home">help_outline</i>{{/link-to}}</li>
         </ul>
+          {{#link-to 'new-question'}}<a class="btn-floating btn-large waves-effect waves-light orange darken-1 hoverable hide-on-large-only right addbtn"><i class="large material-icons">add</i></a>{{/link-to}}
       </div>
     </div>
   </nav>

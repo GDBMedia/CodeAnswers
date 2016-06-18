@@ -11,7 +11,7 @@ export default Ember.Route.extend({
 
       });
       question.destroyRecord();
-      this.transitionTo('index');
+      this.transitionTo('favorites');
     }
   }
 });
